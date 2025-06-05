@@ -8,7 +8,7 @@ test.describe("Homepage", () => {
 
     await expect(page).toHaveTitle(/Ethereum.org/)
 
-    await takeSnapshot(page, "Page loaded", testInfo)
+    await takeSnapshot(page, "initial-load", testInfo)
   })
 
   test("search functionality", async ({ page }) => {
@@ -48,7 +48,7 @@ test.describe("Homepage", () => {
 
     await page.goto("/")
 
-    await takeSnapshot(page, "Mobile page loaded", testInfo)
+    await takeSnapshot(page, "mobile-initial-load", testInfo)
 
     const nav = page.getByRole("navigation", { name: "Primary" })
     const menuButton = nav.getByRole("button", {
@@ -59,7 +59,7 @@ test.describe("Homepage", () => {
     // Open the mobile menu
     await menuButton.click()
 
-    await takeSnapshot(page, "Mobile menu opened", testInfo)
+    await takeSnapshot(page, "mobile-menu-opened", testInfo)
 
     // Check that navigation links are visible in the mobile menu
     const sidebar = page.getByRole("dialog", { name: /ethereum.org/i })

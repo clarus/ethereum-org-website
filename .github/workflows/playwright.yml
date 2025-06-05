@@ -77,7 +77,7 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: fee8e66c9916
+          projectToken: chpt_7691c1ff8d1f07d
           playwright: true
           exitZeroOnChanges: true
           forceRebuild: true
