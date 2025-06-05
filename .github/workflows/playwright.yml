@@ -81,5 +81,6 @@ jobs:
           playwright: true
           exitZeroOnChanges: true
           forceRebuild: true
+          storybookBaseDir: .
         env:
           CHROMATIC_ARCHIVE_LOCATION: ./tests/e2e/__results__
